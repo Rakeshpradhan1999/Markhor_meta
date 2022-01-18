@@ -1,0 +1,49 @@
+.banner {
+  background-image: url(./assets/Path\ 11.png);
+  min-height: 120vh;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
+}
+.banner-right-image {
+  position: absolute;
+  right: -100px;
+  top: 50px;
+  max-width: 800px;
+}
+.about-card,
+.bg-gradient {
+  background: rgb(218, 253, 235);
+  background: linear-gradient(
+    155deg,
+    rgba(218, 253, 235, 1) 0%,
+    rgba(247, 243, 234, 1) 50%,
+    rgba(244, 240, 222, 1) 100%
+  );
+}
+
+.how-to-buy {
+  background-image: url(./assets/how-to-buy-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.slippage {
+  background-image: url(./assets/slippage-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.slippage-card1,
+.slippage-card2 {
+  background-image: url(./assets/slippage1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slippage-card2 {
+  background-image: url(./assets/slippage2.png);
+}
