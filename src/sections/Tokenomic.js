@@ -18,10 +18,10 @@ const cardData = [
 const Tokenomic = () => {
   return (
     <section>
-      <h2 className="text-4xl font-light text-center">TOKENOMICS</h2>
+      <h2 className="text-lg sm:text-4xl font-light text-center">TOKENOMICS</h2>
       <div className="container">
-        <div className="grid grid-cols-2 gap-8 mt-10">
-          <div>
+        <div className="grid sm:grid-cols-2 gap-8 mt-10">
+          <div className="hidden sm:block">
             <img src={TokenomicImage} alt="" className="w-full" />
           </div>
           <div className="flex flex-col items-center justify-center">

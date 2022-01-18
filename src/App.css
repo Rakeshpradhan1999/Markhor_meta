@@ -47,3 +47,77 @@
 .slippage-card2 {
   background-image: url(./assets/slippage2.png);
 }
+
+@media (max-width: 1380px) {
+  .banner-right-image {
+    right: -300px;
+  }
+}
+@media (max-width: 1106px) {
+  .banner-right-image {
+    right: -400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-right-image {
+    right: -10px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+  .banner-right-image {
+    /* right: -200px; */
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .banner-right-image {
+    /* right: -250px; */
+    width: 450px;
+  }
+}
+@media (max-width: 450px) {
+  .banner-right-image {
+    /* right: -120px; */
+    top: 60px;
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .banner-right-image {
+    /* right: -120px; */
+    top: 90px;
+    width: 350px;
+  }
+}
+@media (max-width: 640px) {
+  .text-xxs {
+    font-size: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .text-xxs {
+    font-size: 9px;
+  }
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 95%;
+
+  transform: translateX(-50%);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.active {
+  max-height: 1000px;
+}

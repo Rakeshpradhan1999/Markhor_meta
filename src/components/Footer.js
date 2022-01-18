@@ -25,8 +25,8 @@ const Footer = () => {
       <div className="bg-gradient mt-10">
         <div className="container  flex justify-between py-4 items-center">
           {footerImages.map((val, i) => (
-            <div key={i}>
-              <img src={val} alt="" className="mx-auto" />
+            <div key={i} className="ml-2">
+              <img src={val} alt="" className=" mx-auto" />
             </div>
           ))}
         </div>

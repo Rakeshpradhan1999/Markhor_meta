@@ -23,7 +23,7 @@ const cardList = [
 const About = () => {
   return (
     <section className="py-28">
-      <div className="container grid grid-cols-3 gap-14">
+      <div className="container grid md:grid-cols-3 gap-8 md:gap-4 lg:gap-14">
         {cardList.map((val, i) => (
           <div className="about-card px-8 py-4" key={i}>
             <img src={val.img} alt="" className=" max-w-xs w-full mx-auto" />
