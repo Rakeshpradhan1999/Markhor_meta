@@ -36,7 +36,7 @@ const Banner = () => {
                   <span className="hidden sm:inline">{account}</span>
                   <span className="sm:hidden">
                     {account.slice(0, 14) +
-                      "..." +
+                      "...." +
                       account.slice(account.length - 14)}
                   </span>
                 </p>
