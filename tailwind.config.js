@@ -12,8 +12,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Nura", "sans-serif"],
-        serif: ["Gelion", "sans-serif"],
+        sans: ["PT Sans", "sans-serif"],
+        serif: ["Roboto", "sans-serif"],
       },
       colors: {
         blue: {

@@ -22,14 +22,21 @@ const cardList = [
 
 const About = () => {
   return (
-    <section className="py-8 sm:py-28">
+    <section className="py-8 sm:py-20">
       <div className="container grid md:grid-cols-3 gap-8 md:gap-4 lg:gap-14">
         {cardList.map((val, i) => (
-          <div className="about-card px-8 py-4" key={i}>
+          <div
+            className="about-card px-8 py-4"
+            key={i}
+            data-aos={"fade-up"}
+            data-aos-delay={`${i * 300}`}
+          >
             <img src={val.img} alt="" className=" max-w-xs w-full mx-auto" />
             <div className="font-serif mt-10">
-              <h2 className="font-bold text-xl text-center">{val.title}</h2>
-              <p className="mt-2">{val.text}</p>
+              <h2 className="font-bold text-lg sm:text-xl text-center">
+                {val.title}
+              </h2>
+              <p className="text-center mt-2">{val.text}</p>
             </div>
           </div>
         ))}

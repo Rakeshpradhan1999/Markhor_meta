@@ -7,10 +7,14 @@
   position: relative;
   overflow-x: hidden;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 .banner-right-image {
   position: absolute;
   right: -100px;
-  top: 50px;
+  top: 70px;
   max-width: 800px;
 }
 .about-card,

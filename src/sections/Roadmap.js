@@ -12,35 +12,32 @@ const roadmapData = [
       "Team building",
       "Smart contract development",
       "5000 telegram members",
-      "Website (beta) launch",
+
       "Social media presence",
       "Detailed White paper",
       "Social media marketing push",
       "Target crypto community ",
       "Agreesive marketing",
-      "Website Launch (Beta) Social Media",
+      "Website Launch",
       "Youtube Influencer Promotions",
-      "Introducing Vesting method system machanisam ",
-      "presale buyers will recieve",
     ],
   },
   {
     title: "Phase 2",
     img: roadmap2,
     textList: [
-      "Markhor Meta token Presale 40,000 $ softcap ,100,000 $ hardcap",
+      "MM token Presale 50K $ softcap ,100K $ hardcap",
       "Markhor Meta token launch",
       "Initially Liquidity lock for 6 months to 1 year before",
-      "5000 telegram members",
+
       "launch",
       "AMA Session",
       "Contract Audit",
       "Grow Social Media Presence",
-      "Influencer Promotions",
+
       "Partnerships With Other Communities",
       "Coinsniper ,Coinboom,Coin vote listing",
-      "Partnership with Technology & Advisory Firm Final",
-      "Website Launch ",
+
       "Listings on CMC and CoinGecko",
     ],
   },
@@ -70,7 +67,9 @@ const roadmapData = [
 const Roadmap = () => {
   return (
     <div className="py-10 sm:py-20">
-      <h2 className="text-4xl font-light text-center">Roadmap</h2>
+      <h2 className="text-4xl font-bold text-center " data-aos={"fade-up"}>
+        Roadmap
+      </h2>
       <div className="container mt-10">
         {roadmapData.map((val, i) => (
           <div
@@ -78,7 +77,10 @@ const Roadmap = () => {
             key={i}
           >
             <div className="col-span-8  md:col-span-4">
-              <div className="bg-gradient px-8 p-6 font-serif md:hidden mt-4">
+              <div
+                className="bg-gradient px-8 p-6 font-serif md:hidden mt-4"
+                data-aos={"fade-up"}
+              >
                 <h4 className="text-xl sm:text-2xl mb-3 font-bold">
                   {val.title}
                 </h4>
@@ -91,7 +93,10 @@ const Roadmap = () => {
                 </ul>
               </div>
               {i % 2 === 0 ? (
-                <div className="bg-gradient px-8 p-6 font-serif hidden md:block">
+                <div
+                  className="bg-gradient px-8 p-6 font-serif hidden md:block"
+                  data-aos={"fade-right"}
+                >
                   <h4 className="text-2xl mb-3 font-bold">{val.title}</h4>
                   <ul>
                     {val.textList.map((val, i) => (
@@ -102,7 +107,7 @@ const Roadmap = () => {
                   </ul>
                 </div>
               ) : (
-                <div className="p-4 hidden md:block">
+                <div className="p-4 hidden md:block" data-aos={"fade-right"}>
                   <img
                     src={val.img}
                     alt=""
@@ -132,7 +137,10 @@ const Roadmap = () => {
             </div>
             <div className=" hidden md:block col-span-4">
               {i % 2 === 1 ? (
-                <div className="bg-gradient px-8 p-6 font-serif">
+                <div
+                  className="bg-gradient px-8 p-6 font-serif"
+                  data-aos={"fade-left"}
+                >
                   <h4 className="text-2xl mb-3 font-bold">{val.title}</h4>
                   <ul>
                     {val.textList.map((val, i) => (
@@ -143,7 +151,7 @@ const Roadmap = () => {
                   </ul>
                 </div>
               ) : (
-                <div className="p-4">
+                <div className="p-4" data-aos={"fade-left"}>
                   <img
                     src={val.img}
                     alt=""

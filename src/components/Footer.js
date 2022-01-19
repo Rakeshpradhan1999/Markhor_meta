@@ -1,25 +1,95 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useRef, useState } from "react";
 import { BsChevronRight } from "react-icons/bs";
 import Footer1 from "../assets/footer1.png";
 import Footer2 from "../assets/footer2.png";
 import Footer3 from "../assets/footer3.png";
 import Footer4 from "../assets/footer4.png";
 import Footer5 from "../assets/footer5.png";
-
+import emailjs from "@emailjs/browser";
 const footerImages = [Footer1, Footer2, Footer3, Footer4, Footer5];
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_aiuyigr",
+        "template_krnvlhd",
+        form.current,
+        "user_wEjuiKkTKbHLC6Wmi7FoW"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormData({ user_name: "", user_email: "", message: "" });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  const inputHandler = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
   return (
     <footer className="pt-20">
       <div className="container font-serif">
-        <p className="text-xl  text-center font-light">Stay updated with us</p>
-        <div className="mt-10">
-          <Input />
-        </div>
-        <p className="text-center font-light mt-8">
-          Subscribe now and be the first to find about our latest products.
+        <p className="text-xl  text-center font-light " data-aos={"fade-up"}>
+          Get in touch with us
         </p>
+        <div className="mt-10">{/* <Input /> */}</div>
+        {/* <p className="text-center font-light mt-8">
+          Subscribe now and be the first to find about our latest products.
+        </p> */}
+        <div className="max-w-md mx-auto">
+          <form ref={form} onSubmit={sendEmail} data-aos={"fade-up"}>
+            <div className="bg-white border border-gray-600 mb-4 rounded-lg overflow-hidden">
+              <input
+                type="text"
+                className="p-2 px-4 w-full focus:outline-none"
+                placeholder="Name"
+                name="user_name"
+                value={formData.user_name}
+                onChange={inputHandler}
+              />
+            </div>
+            <div className="bg-white border border-gray-600 mb-4 rounded-lg overflow-hidden">
+              <input
+                type="text"
+                className="p-2 px-4 w-full focus:outline-none"
+                placeholder="Email"
+                name="user_email"
+                value={formData.user_email}
+                onChange={inputHandler}
+              />
+            </div>
+            <div className="bg-white border border-gray-600 mb-4 rounded-lg overflow-hidden">
+              <textarea
+                id="message"
+                rows="4"
+                cols="100"
+                className="p-2 px-4 w-full focus:outline-none"
+                placeholder="Message"
+                name="message"
+                value={formData.message}
+                onChange={inputHandler}
+              ></textarea>
+            </div>
+            <button className="bg-gradient shadow-md  text-black w-full py-2 rounded-full">
+              Submit
+            </button>
+          </form>
+        </div>
         <p className="text-center font-light mt-8 text-sm">
-          Copyright 2019, Crypto ICO, Lorem Ipsum
+          Copyright 2022, Markhor Meta
         </p>
       </div>
       <div className="bg-gradient mt-10">

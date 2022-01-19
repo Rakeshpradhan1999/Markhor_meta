@@ -18,10 +18,15 @@ const cardData = [
 const Tokenomic = () => {
   return (
     <section>
-      <h2 className="text-lg sm:text-4xl font-light text-center">TOKENOMICS</h2>
+      <h2
+        className="text-lg sm:text-4xl font-bold text-center"
+        data-aos={"fade-up"}
+      >
+        TOKENOMICS
+      </h2>
       <div className="container">
-        <div className="grid sm:grid-cols-2 gap-8 mt-10">
-          <div className="">
+        <div className="grid sm:grid-cols-2 gap-8 mt-10 items-center">
+          <div className="" data-aos={"fade-right"}>
             <img src={TokenomicImage} alt="" className="w-full" />
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -29,6 +34,8 @@ const Tokenomic = () => {
               <div
                 className="px-8 py-8 font-serif bg-gradient max-h-max mb-8"
                 key={i}
+                data-aos={"fade-left"}
+                data-aos-delay={`${i * 300}`}
               >
                 <h3 className=" font-bold text-lg mb-2">{val.title}</h3>
                 <p>{val.text}</p>

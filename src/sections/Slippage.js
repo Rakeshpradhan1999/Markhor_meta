@@ -23,13 +23,19 @@ const slippageData = [
 
 const Slippage = () => {
   return (
-    <section className="slippage pt-40 pb-10 ">
+    <section className="slippage pt-20 pb-10 ">
       <div className="px-8 md:px-0">
-        <h2 className="text-lg sm:text-4xl font-light text-center">
+        <h2
+          className="text-lg sm:text-4xl font-bold text-center"
+          data-aos={"fade-up"}
+        >
           MARKHOR SLIPPAGE
         </h2>
         <div className="flex  flex-col md:flex-row  font-serif mt-20 justify-between">
-          <div className="slippage-card1 px-8 lg:px-16 py-16 bg-white   bg-opacity-50 shadow-lg">
+          <div
+            data-aos={"fade-right"}
+            className="slippage-card1 px-8 lg:px-16 py-16 bg-white   bg-opacity-50 shadow-lg"
+          >
             <h3 className="font-bold text-lg ">{slippageData[0].title}</h3>
             <ul>
               {slippageData[0].list.map((val, i) => (
@@ -39,7 +45,10 @@ const Slippage = () => {
               ))}
             </ul>
           </div>
-          <div className="slippage-card2 px-8 lg:px-16 py-16 bg-white  bg-opacity-50 shadow-lg text-right mt-10 md:mt-0">
+          <div
+            data-aos={"fade-left"}
+            className="slippage-card2 px-8 lg:px-16 py-16 bg-white  bg-opacity-50 shadow-lg text-right mt-10 md:mt-0"
+          >
             <h3 className="font-bold text-lg ">{slippageData[1].title}</h3>
             <ul>
               {slippageData[1].list.map((val, i) => (
