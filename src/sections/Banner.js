@@ -32,7 +32,14 @@ const Banner = () => {
                     <FiChevronDown />
                   </span>
                 </div>
-                <p className="ml-1 sm:ml-2 px-2">{account}</p>
+                <p className="ml-1 sm:ml-2 px-2">
+                  <span className="hidden sm:inline">{account}</span>
+                  <span className="sm:hidden">
+                    {account.slice(0, 14) +
+                      "..." +
+                      account.slice(account.length - 14)}
+                  </span>
+                </p>
               </div>
               <button className="px-6 text-xxs sm:text-base rounded-full sm:rounded-lg py-2 block ml-4 bg-white shadow-lg ">
                 Copy <span className="hidden sm:inline">Link</span>
