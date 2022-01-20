@@ -1,7 +1,7 @@
 .banner {
   background-image: url(./assets/Path\ 11.png);
-  min-height: 150vh;
-  /* height: %; */
+  min-height: 130vh;
+
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
