@@ -1,14 +1,15 @@
 .banner {
   background-image: url(./assets/Path\ 11.png);
-  min-height: 130vh;
+  /* min-height: 130vh; */
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
+  padding-bottom: 100px;
 }
 html,
 body {
   overflow-x: hidden;
-  /* position: relative; */
+  position: relative;
 }
 .banner-right-image {
   position: absolute;
@@ -103,7 +104,8 @@ body {
 }
 @media (max-width: 380px) {
   .banner {
-    min-height: 80vh;
+    /* min-height: 80vh; */
+    padding-bottom: 30px;
   }
   .text-xxs {
     font-size: 9px;
