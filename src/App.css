@@ -1,7 +1,6 @@
 .banner {
   background-image: url(./assets/Path\ 11.png);
   min-height: 130vh;
-
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -9,6 +8,7 @@
 html,
 body {
   overflow-x: hidden;
+  /* position: relative; */
 }
 .banner-right-image {
   position: absolute;
